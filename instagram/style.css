@@ -1,0 +1,567 @@
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: #222222;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Raleway;
+}
+
+body {
+    min-height: 100%;
+    margin: 0px;
+    position: relative;
+    box-sizing: inherit;
+    background-color: var(--primary-color);
+}
+
+input {
+    font-family: Raleway;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+.addColor {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.logo-container h1 {
+    margin-left: 10px;
+    font-size: 26px;
+    font-weight: 200;
+    color: var(--secondary-color);
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 0px 1px 1px 1px rgba(0, 5, 5, 0.232);
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    margin-left: 20px;
+}
+
+.sidebar-item h3:hover {
+    opacity: 0.7;
+}
+
+.sidebar-icon:hover, .sidebar-item-profile-image:hover {
+    opacity: 0.7;
+}
+
+.sidebar-item h3 {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.sidebar-item-profile-image {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.sidebar-item-bottom, .sidebar-item-bottom h3 {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: auto;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.accountbar-container {
+    width: 350px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: var(--secondary-color);
+}
+
+.accountbar-item {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 250px;
+    height: 100vh;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 470px;
+    margin-left: 60px;
+    margin-right: 80px;
+    margin-top: 20px;
+}
+
+.post {
+    width: 470px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 1px 0px 0px rgba(0, 5, 5, 0.232);
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+
+.post-image {
+    width: 470px;
+    max-height: 600px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: none;
+    border-radius: 5px;
+}
+
+.post-likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-description {
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.post-comment {
+    text-align: start;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    word-break: break-word;
+}
+
+.post-comment form {
+    width: 100%;
+}
+
+.post-comments {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-icons {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.post-icons img:hover, .trash-icon:hover, .exit-icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.trash-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.current-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.current-user button {
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: rgb(0, 128, 255);
+}
+
+.current-user img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+}
+
+.switch-user {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.blur {
+    filter: blur(2px);
+    opacity: 0;
+}
+
+.exit {
+    z-index: 999;
+}
+
+.exit-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.switch-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.switch-user-list {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    margin: 0px;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.switch-user-list h3 {
+    font-weight: 400;
+    text-align: center;
+}
+
+.switch-user-item {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    box-shadow: 0px 1px 200px 0px rgba(0, 5, 5, 0.232);
+    border: none;
+    border-radius: 20px;
+}
+
+.switch-user-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.switch-user-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.switch-to-hide h3 {
+    display: none;
+}
+
+.suggested-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.suggested-user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.suggested-container {
+    padding-bottom: 10px;
+    box-shadow: 0px 1px 0px 0px rgba(0, 5, 5, 0.232);
+}
+
+.follow-button {
+    margin-left: auto;
+    padding: 3px 8px;
+    border: 1px solid #007BFF;
+    background-color: #007BFF;
+    color: var(--primary-color);
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.follow-button:hover {
+    background-color: #0069D9;
+}
+
+.impressum {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.mobile-bar {
+    display: none;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: none;
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 1245px) {
+    .accountbar-container {
+        display: none;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .switch-user-item {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar-container {
+        width: 200px;
+    }
+
+    .logo-container h1 {
+        font-size: 22px;
+    }
+
+    .sidebar-item h3 {
+        font-size: 15px;
+    }
+
+    .container {
+        margin-left: 200px;
+    }
+
+    .post-container {
+        margin-left: 40px;
+        margin-right: 60px;
+    }
+
+    .post {
+        width: 400px;
+    }
+
+    .post-image {
+        width: 400px;
+    }
+
+    .switch-user-item {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding-bottom: 65px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar-item {
+        margin-left: 0px;
+    }
+
+    .mobile-bar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        display: unset;
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .post-container {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 0px;
+        min-width: auto;
+    }
+
+    .post, .post-image {
+        width: 100%;
+    }
+
+    .sidebar-item h3 {
+        display: none;
+    }
+
+    .switch-user-item {
+        width: 100%;
+    }
+
+    .switch-user-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+/* raleway-200 - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/raleway-v28-latin-200.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/raleway-v28-latin-200.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/raleway-v28-latin-200.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/raleway-v28-latin-200.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/raleway-v28-latin-200.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/raleway-v28-latin-200.svg#Raleway') format('svg');
+    /* Legacy iOS */
+}
+
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/raleway-v28-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/raleway-v28-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/raleway-v28-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/raleway-v28-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/raleway-v28-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/raleway-v28-latin-regular.svg#Raleway') format('svg');
+    /* Legacy iOS */
+}
+
+/* raleway-700 - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/raleway-v28-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/raleway-v28-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/raleway-v28-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/raleway-v28-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('fonts/raleway-v28-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/raleway-v28-latin-700.svg#Raleway') format('svg');
+    /* Legacy iOS */
+}

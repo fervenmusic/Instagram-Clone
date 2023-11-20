@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simplegram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/logo.png" type="image/icon type">
+</head>
+
+<body onload="render()">
+    <div id="blur">
+
+        <div class="mobile-bar">
+            <div class="sidebar-item">
+                <a href="#"><img src="icons/home.svg" alt="home" class="sidebar-icon"></a>
+            </div>
+
+            <div class="sidebar-item">
+                <img src="icons/explore.svg" alt="explore" class="sidebar-icon">
+            </div>
+
+            <div class="sidebar-item">
+                <img src="icons/reels.svg" alt="reels" class="sidebar-icon">
+            </div>
+
+            <div class="current-user-image">
+
+            </div>
+        </div>
+
+        <div class="sidebar">
+
+            <div class="sidebar-container">
+                <div class="logo-container">
+                    <img src="icons/logo.png" alt="logo" class="logo">
+                    <h1>simplegram</h1>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="#"><img src="icons/home.svg" alt="home" class="sidebar-icon"></a>
+                    <a href="#"><h3>Home</h3></a>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="icons/search.svg" alt="search" class="sidebar-icon">
+                    <h3>Search</h3>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="icons/explore.svg" alt="explore" class="sidebar-icon">
+                    <h3>Explore</h3>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="icons/reels.svg" alt="reels" class="sidebar-icon">
+                    <h3>Reels</h3>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="icons/messages.svg" alt="messages" class="sidebar-icon">
+                    <h3>Messages</h3>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="icons/heart.svg" alt="heart" class="sidebar-icon">
+                    <h3>Notifications</h3>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="icons/create.svg" alt="create" class="sidebar-icon">
+                    <h3>Create</h3>
+                </div>
+
+                <div class="current-user-image">
+
+                </div>
+
+                <div class="sidebar-item-bottom">
+                    <img src="icons/more.svg" alt="more" class="sidebar-icon">
+                    <h3>More</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div id="posts" class="post-container">
+
+            </div>
+
+            <div class="accountbar">
+                <div class="accountbar-container">
+
+                    <div id="current-user">
+                    </div>
+
+                    <div class="suggested-container">
+
+                    </div>
+
+                    <div class="impressum">
+                        <h3>Impressum</h3>
+                        <p>practice project by Kevin Horlitz</p>
+                        <p>photos from pexels.com</p>
+                        <p>icons from iconfinder.com</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="switch-user" class="switch-user display-none">
+        <div class="exit">
+            <img src="icons/exit.svg" alt="exit" class="exit-icon" onclick="toggleSwitchUser()">
+        </div>
+        <div class="switch-user-container">
+            <div class="switch-user-list">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
